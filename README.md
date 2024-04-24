@@ -1,6 +1,7 @@
 # Carlos_Bez - Portafolio
 
-Este es un proyecto de portafolio para el artista Carlos_Bez, enfocado en mostrar su trabajo en tattoo, diseño gráfico, murales y serigrafía. El diseño del sitio es minimalista, con una paleta de colores en blanco, negro y gris para resaltar las obras del artista.
+Este es un proyecto de portafolio para el artista Carlos_Bez, enfocado en mostrar su trabajo en tattoo, diseño gráfico, murales y serigrafía. 
+El diseño del sitio es minimalista, con una paleta de colores en blanco, negro y gris para resaltar las obras del artista.
 
 ## Contenido
 
@@ -39,7 +40,7 @@ Puedes ver una demostración del proyecto [aquí](#).
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/tu_usuario/carlos_bez_portafolio.git
+git clone https://github.com/tu_usuario/carlos_bez.git
 ```
 
 2. Abre el archivo `index.html` en tu navegador web.
@@ -57,7 +58,7 @@ Si quieres contribuir a este proyecto, sigue estos pasos:
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo (LICENSE) para más detalles.
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 
