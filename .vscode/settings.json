@@ -3,5 +3,16 @@
         "activityBar.background": "#4C0768",
         "titleBar.activeBackground": "#6A0A91",
         "titleBar.activeForeground": "#FDF9FF"
-    }
+    },
+    "cSpell.words": [
+        "Contacto",
+        "Galería",
+        "MURALISTA",
+        "Portafolio",
+        "Sobre",
+        "tatto",
+        "TATUADOR"
+    ],
+    "liveServer.settings.port": 5501,
+    "cSpell.language": "en,es-ES"
 }
