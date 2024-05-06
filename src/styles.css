@@ -44,6 +44,7 @@ nav ul  li a:hover {
 }
 section {
     margin: 0;
+    padding: 0;
 }
 
 footer {
@@ -86,9 +87,13 @@ form button:hover {
 }
 .container__main {
     width: 80%;
-    margin: 170px auto auto auto;
+    margin: auto;
+    overflow: hidden;
+    margin: 160px auto auto auto;
 }
 h1 {
+    margin: 0 auto;
+    padding-top: 10px;
     text-align: center;
     font-size: 36px;
     line-height: 42px;
@@ -106,10 +111,17 @@ h1 {
     line-height: 24px;
     color: rgba(0, 0, 0, .6);
 }
-.info-artist, 
+.info-artist {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    max-width: 1000px;
+    height: 150px;
+    margin-bottom: 32px;
+}
 .info-button {
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 60px;
 }
 button {
     width: 150px;
@@ -127,9 +139,10 @@ button {
     flex-wrap: wrap;
 }
 .work {
-    width: 200px;
+    width: 230px;
     height: 230px;
     padding: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
     background-color: white;
 }
@@ -148,4 +161,60 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
+.about-img {
+    width: 500px;
+    height: 200px;
+}
+.about-text {
+    font-size: 25px;
+    padding-left: 50px;
+    text-align: left;
+}
+.button-send {
+    margin-bottom: 52px;
+    color:  rgba(0, 0, 0, .6);
+    border: none;
+    cursor: pointer;
+    
+}
+@media screen and (max-width: 960px) {
+    h1 {
+        margin-top: 20px;
+        font-size: 25px;
+        line-height: 22px;
+    }
+    #info {
+        line-height: 20px;
+    }
+    .info-artist {
+        color: white;
+        font-size: 18px;
+        height: 320px;
+        text-align: justify;
+        margin-bottom: 0px;
+    }
+    .info-button {
+        float: none;
+        display: block;
+        margin: auto;
+        margin-top: 8px;
+        
+    }
+    #about {
+        flex-direction: column;
+    }
+    .about-img {
+        width: 250px;
+        height: 250px;
+    }
+    .about-text {
+        padding-top: 10px;
+        font-size: 14px;
+        padding-left: 0;
+        text-align: justify;
+        color: white;
+    }
+  }
+  
