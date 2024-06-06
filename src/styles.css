@@ -1,220 +1,322 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Recursive', sans-serif;
-    color: black;
-    background-image: url(./carlos.png);
-    background-position: center;
-    background-size: cover;
+    box-sizing: border-box;
 }
-
+html, body {
+    font-family: "Roboto Condensed", sans-serif;
+    /*background-image: linear-gradient(90deg, white 0%, rgb(160, 157, 139) 35%, rgb(134, 113, 60) 100%);*/
+}
 header {
-    background-color: white;
-    color: black;
-    padding: 10px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
     position: fixed;
-    top: 0;
     left: 0;
-    width: 100%;
-    z-index: 999;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+h1 {
+    padding: 12px;
+    margin-bottom: 30px;
+    font-size: 45px;
+    letter-spacing: 3px;
+    background-color: rgb(179, 131, 10);
 }
 .logo {
-    margin-left: 30px;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
 }
+nav {
+    display: flex;
+    align-items: center;
+}
 nav ul {
-    margin-right: 30px;
-    list-style-type: none;
+    display: flex;
+    list-style: none;
 }
 nav ul li {
-    margin-right: 30px;
-    display: inline;
+    padding-right: 20px;
 }
 nav ul li a {
-    font-size: 18px;
-    color: black;
+    padding: 5px 10px;
+    color: white;
+    font-size: 22px;
     text-decoration: none;
 }
-nav ul  li a:hover {
-    color: red;
-}
-section {
-    margin: 0;
-    padding: 0;
-}
-
-footer {
-    text-align: center;
-    color: white;
-}
-.social a img {
-    height: 30px;
-    filter: invert(0);
+nav ul li a:hover,
+nav ul li a.active {
     background-color: white;
-    margin-right: 10px;
+    color: black;
 }
-form {
+main {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
+.section {
+    width: 100%;
+    height: 100vh;
+    padding-top: 30px;
+    scroll-margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-image: url('./Screenshot_20240514_203522_Instagram.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;   
+    border: 2px solid rgb(179, 131, 10);*/
+}
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.home-paragraph {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.home-paragraph-second {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(179, 131, 10);
+    margin-top: 20px;
+}
+.home-button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.home-button a {
+    padding: 20px 60px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+.home-button a:hover {
+    color: rgb(179, 131, 10);
+}
+.section-about {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.section-about-img {
+    width: 100%;
+    max-width: 700px;
+    max-height: 700px;
+}
+.section-about-description {
+    max-width: 800px;
+}
+.section-about-description-p {
+    font-size: 20px;
+    text-align: justify;
+}
+.section-about-description-rs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 18px;
+    background-color: rgb(179, 131, 10);
+} 
+.section-about-description-rs a {
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+}
+.section-about-description-rs a:hover {
+    color: white;
+}
+.section-socialmedia {
+    position: fixed;
+    z-index: 1000;
+    top: 70%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 16px;
+    background-color: rgb(179, 131, 10);
+}
+.section-socialmedia a {
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+}                  
+.gallery-container {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.gallery-item  {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+}
+.imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*box-shadow: 8px 6px 6px black; */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.description {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+.gallery-item:hover .description {
+    display: block;
+    opacity: 1;
+}
+.gallery-item:hover .imagen {
+    transform: scale(1.1);
+}
+h2 {
+    padding: 10px 20px;
+    font-size: 45px;
+    background-color: rgb(179, 131, 10);
+}
+.section-contact-h2 {
+    margin-bottom: 30px;
+}
+#contact {
+    width: 100%;
+        
+}
+form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(179, 131, 10);
+    margin: 0 auto;
+}
 form label {
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-top: 10px;
 }
-
 form input,
 form textarea {
-    margin-bottom: 20px;
+    width: 100%;
     padding: 10px;
+    margin-top: 5px;
+    border: 1px solid rgb(179, 131, 10);
     border-radius: 5px;
-    border: 1px solid #ccc;
 }
-
 form button {
-    padding: 10px 20px;
+    margin-top: 20px;
+    padding: 20px 60px;
+    font-size: 24px;
+    font-weight: bold;
     border: none;
     background-color: black;
     color: white;
     cursor: pointer;
 }
-
 form button:hover {
-    background-color: #ee7b7b;
-}
-.container__main {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    margin: 160px auto auto auto;
-}
-h1 {
-    margin: 0 auto;
-    padding-top: 10px;
-    text-align: center;
-    font-size: 36px;
-    line-height: 42px;
-    letter-spacing: -1px;
-    color: rgb(96, 96, 96);
-    font-weight: bold;
-    text-transform: uppercase;
-}
-#info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    line-height: 24px;
-    color: rgba(0, 0, 0, .6);
-}
-.info-artist {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    max-width: 1000px;
-    height: 150px;
-    margin-bottom: 32px;
-}
-.info-button {
-    text-align: center;
-    margin-top: 60px;
-}
-button {
-    width: 150px;
-    padding: 18px;
-    font-size: 24px;
-    font-weight: bold;
-    background-image: linear-gradient(-180deg, #ffa500, #ff7f00);
-    transition: all .5s ease-in-out;
-    border: none;
-    cursor: pointer;
-}
-.gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.work {
-    width: 230px;
-    height: 230px;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: white;
-}
-.work img {
-    width: 100%;
-    height: 200px;
-}
-.work h3 {
     color: black;
-    font-family: 'Raleway', sans-serif;
-    font-weight: normal;
-    font-size: 14px;
-    margin-top: 10px;
+    background-color: rgb(179, 131, 10);
 }
-#about {
+.section-service-h2 {
+    margin-bottom: 30px;
+}
+.section-service {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+    gap: 30px;
 }
-.about-img {
-    width: 500px;
-    height: 200px;
+article {
+    width: 300px;
+    font-size: 20px;
 }
-.about-text {
-    font-size: 25px;
-    padding-left: 50px;
-    text-align: left;
+h3 {
+    text-align: center;
 }
-.button-send {
-    margin-bottom: 52px;
-    color:  rgba(0, 0, 0, .6);
-    border: none;
-    cursor: pointer;
-    
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
 }
-@media screen and (max-width: 960px) {
+@media (max-width: 768px) {
+    header {
+        justify-content: flex-start;
+    }
+    .logo {
+        align-content: center;
+        margin-right: 25px;
+    }
+    nav ul {
+        display: block;    
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+    background-color: transparent;
+    color: rgb(179, 131, 10);
+    }
     h1 {
-        margin-top: 20px;
-        font-size: 25px;
-        line-height: 22px;
+        font-size: 20px;
     }
-    #info {
-        line-height: 20px;
+    .section {
+        height: auto;
+        padding-top: 180px;
+        scroll-margin-top: 25px;
     }
-    .info-artist {
-        color: white;
-        font-size: 18px;
-        height: 320px;
-        text-align: justify;
-        margin-bottom: 0px;
-    }
-    .info-button {
-        float: none;
-        display: block;
-        margin: auto;
-        margin-top: 8px;
-        
-    }
-    #about {
+    .home-button {
         flex-direction: column;
     }
-    .about-img {
-        width: 250px;
-        height: 250px;
+    .section-about {
+        flex-direction: column;
     }
-    .about-text {
-        padding-top: 10px;
-        font-size: 14px;
-        padding-left: 0;
-        text-align: justify;
-        color: white;
+    .gallery-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
-  }
-  
+    .gallery-item {
+        width: 100%;
+        height: 100%;
+    }
+    .section-socialmedia {
+        background-color: transparent;
+    }
+    .section-socialmedia a {
+        color: red;
+        font-size: 1.2em;
+    }                  
+}

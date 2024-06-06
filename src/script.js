@@ -1,7 +1,11 @@
-// Añade interactividad aquí si es necesario
-
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    alert("¡Mensaje enviado! Gracias por ponerte en contacto con Carlos_Bez.");
-});
+function ampliarImagen(item) {
+    const img = item.querySelector('.imagen');
+    const desc = item.querySelector('.description');
+    if (img.style.transform === "scale(1.1)") {
+        img.style.transform = "scale(1)";
+        desc.style.display = "none";
+    } else {
+        img.style.transform = "scale(1.1)";
+        desc.style.display = "block";
+    }
+}
