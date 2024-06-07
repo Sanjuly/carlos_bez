@@ -160,7 +160,10 @@ main {
     color: black;
     font-size: 2em;
     text-decoration: none;
-}                  
+}  
+.section-socialmedia a:hover {
+    color: white;
+}                 
 .gallery-container {
     padding-top: 30px;
     display: flex;
